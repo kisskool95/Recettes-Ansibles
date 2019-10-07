@@ -3,3 +3,8 @@
   package:
     name: htop
     state: present
+
+- name: Installation package Vim
+  package:
+    name: vim
+    state: present
