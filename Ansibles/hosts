@@ -1,0 +1,9 @@
+[all]
+database
+web
+
+[database]
+192.168.x.x
+
+[web]
+192.168.x.x
