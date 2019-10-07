@@ -1,7 +1,5 @@
 ---
- - hosts: all
-   remote_user: root
-   #become: yes
-   #become_user: root
-   #roles:
-   #- "roles/common"
+- hosts: all
+  remote_user: root
+  roles:
+     - common
