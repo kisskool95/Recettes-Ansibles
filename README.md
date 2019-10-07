@@ -1,2 +1,2 @@
-Bonjour, Voici la mise à jour de la documentation
+Bonjour, Voici la mise à jour de la documentation.
 
