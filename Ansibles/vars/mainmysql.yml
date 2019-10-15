@@ -9,17 +9,3 @@ mysql_users:
     host: "%"
     password: itescia
     priv: "itescia_db.*:ALL"
-    
-- name: mysql backup | create backup directory
-  become: yes
-  file:
-    path: "{{ mysql_backup_dir }}"
-    recurse: yes
-    state: directory
-
-- name: mysql backup | create cron job
-  become: yes
-  template:
-    src: etc-crond-mysql-backup.j2
-    dest: /etc/cron.{{ mysql_backup_frequency }}/mysql-backup
-    mode: 0755
