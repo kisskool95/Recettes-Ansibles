@@ -3,6 +3,5 @@
   remote_user: root
   roles:
           - common
-          - { role: geerlingguy.mysql }
   become: yes
   #become_user: root
