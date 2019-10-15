@@ -6,3 +6,7 @@
 # Installation du role apache via Ansible Galaxy
 
 - src: geerlingguy.apache
+
+# Installation du role mysql_backup 
+
+- src: ome.mysql_backup
