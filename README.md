@@ -11,3 +11,7 @@ ansible-galaxy install -r requirements.yml
 # 3) Jouer le playbook system.yml
 
 ansible-playbook system.yml -i hosts
+
+# 4) Jouer le playbook Mysql.yml
+
+ansible-playbook mysql.yml -i hosts
