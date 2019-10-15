@@ -1,0 +1,8 @@
+---
+# Installation du role mysql via Ansible Galaxy 
+
+- src: geerlingguy.mysql
+
+# Installation du role apache via Ansible Galaxy
+
+- src: geerlingguy.apache
