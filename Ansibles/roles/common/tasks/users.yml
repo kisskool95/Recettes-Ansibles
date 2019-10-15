@@ -1,2 +1,26 @@
 ---
+- name: "Création de groupe"
+  group:
+          name: itescia
+          state: present
 
+- name: "Création d'un utilisateur"
+  user:
+          name: "itesciadmin"
+          password: '!'
+          groups: sudo, itescia
+          state: present
+          createhome: yes
+          home: /home/itesciadmin
+
+- name: "SSH autorisé"
+  authorized_key:
+          user: itescia
+          state: present
+          key: ''
+
+- name: "Supression d'un utilisateur existant"
+  user:
+          name: itescia
+          state: absent
+          remove: yes
