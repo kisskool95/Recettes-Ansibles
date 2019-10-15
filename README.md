@@ -1,5 +1,13 @@
 Bonjour, Voici la mise à jour de la documentation.
 
-To play your playbook :
+# 1) récupérer le projet
+
+git clone https://github.com/kisskool95/Recettes-Ansibles.git
+
+# 2) insaller les requirements.yml
+
+ansible-galaxy install -r requirements.yml
+
+# 3) Jouer le playbook system.yml
 
 ansible-playbook system.yml -i hosts
