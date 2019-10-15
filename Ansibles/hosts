@@ -1,8 +1,10 @@
 [all]
 192.168.233.128
 
+
 [apache]
-apache.itescia19.local
+#apache.itescia19.local
 
 [database]
-database.itescia19.local
+192.168.233.129
+#database.itescia19.local
