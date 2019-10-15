@@ -1,25 +1,13 @@
 ---
-- name: "Création de groupe"
-  group:
-          name: itescia
-          state: present
-
-- name: "Création d'un utilisateur"
+- name: Add user itesciadmin
   user:
-          name: "itesciadmin"
-          password: '!'
-          groups: sudo, itescia
-          state: present
-          createhome: yes
+          name: itesciadmin
+          shell: /bin/bash
           home: /home/itesciadmin
+          uid: 1001
+          groups: itescia,sudo
 
-- name: "SSH autorisé"
-  authorized_key:
-          user: itescia
-          state: present
-          key: ''
-
-- name: "Supression d'un utilisateur existant"
+- name: Remove user itescia
   user:
           name: itescia
           state: absent
