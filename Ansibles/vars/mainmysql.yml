@@ -9,4 +9,5 @@ mysql_users:
     host: "%"
     password: "{{item.password}}"
     priv: "itescia_db.*:ALL"
-  loop: "{{ clients|subelements('mysql.hosts') }}"
+  with_items:
+      - "{{ clients }}"
