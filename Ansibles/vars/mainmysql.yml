@@ -5,10 +5,8 @@ mysql_databases:
     encoding: latin1
     collation: latin1_general_ci
 mysql_users:
-  - name: "{{ item.username }}"
-    host: "{{ item.mysql.hosts }}"
-    password: "{{ item.mysql.password }}"
-    priv: "{{ item.mysql.privs | join('/') }}"
-    with_items:
-    - "{{ clients }}"
-    - mysql.hosts
+  name: "{{ item.username }}"
+  host: "{{ item.mysql.hosts }}"
+  password: "{{ item.mysql.password }}"
+  priv: "{{ item.mysql.privs | join('/') }}"
+with_items: "{{ clients }}"
