@@ -9,6 +9,6 @@ mysql_users:
     host: "{{ item.mysql.hosts }}"
     password: "{{ item.mysql.password }}"
     priv: "{{ item.mysql.privs | join('/') }}"
-    with_subelements:
+    with_items:
     - "{{ clients }}"
     - mysql.hosts
