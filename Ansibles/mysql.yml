@@ -7,7 +7,7 @@
   pre_tasks:
     - name: Creation des users mysql
       set_fact: 
-              mysql_users: "{{ mysql_users | default([])+ [{'name': item.username, 'password': item.mysql.password, 'host': item.mysql.hosts, 'priv': item.mysql.privs}] }}"
+              mysql_users: "{{ mysql_users | default([])+ [{'name': item.username, 'password': item.password, 'host': item.host, 'priv': item.priv}] }}"
       with_items: {{ clients }}
   roles:
     - { role: geerlingguy.mysql }

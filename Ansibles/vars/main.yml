@@ -1,18 +1,12 @@
 ---
 clients: 
   - username: client1
-    mysql:
-        password: itescia
-        hosts:
-          - "%"
-        privs:
-          - "itescia_db.*:ALL"
+    password: itescia
+    host: "%"
+    priv: "itescia_db.*:ALL"
   - username: client2
-    mysql:
-        password: itescia
-        hosts:
-          - "%"
-        privs:
-          - "itescia_db.*:ALL"
+    password: itescia
+    hosts: "%"
+    privs: "itescia_db.*:ALL"
       
     
