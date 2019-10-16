@@ -5,10 +5,10 @@ mysql_databases:
     encoding: latin1
     collation: latin1_general_ci
 mysql_users:
-  name: "{{ item.username }}"
+  - name: "{{ item.username }}"
     host: "{{ item.mysql.hosts }}"
     password: "{{ item.mysql.password }}"
     priv: "{{ item.mysql.privs | join('/') }}"
-  with_subelements:
+    with_subelements:
     - "{{ clients }}"
     - mysql.hosts
