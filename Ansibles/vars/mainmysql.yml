@@ -9,4 +9,4 @@ mysql_users:
     host: "%"
     password: {{password}}
     priv: "itescia_db.*:ALL"
-    loop: {{clients}}
+    with_items: {{clients}}
