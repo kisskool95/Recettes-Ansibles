@@ -10,4 +10,5 @@ mysql_users:
     password: {{item.password}}
     priv: "itescia_db.*:ALL"
     state: present
-  loop_var : {{clients}}
+  with_subelements:
+    - "{{ clients }}"
