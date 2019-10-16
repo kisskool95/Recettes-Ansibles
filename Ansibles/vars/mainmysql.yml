@@ -7,8 +7,7 @@ mysql_databases:
 mysql_users:
   - name: {{item.name}}
     host: "%"
-    password: {{item.mysql.password}}
-    priv: {{item.mysql.priv}}
+    password: {{item.password}}
+    priv: "itescia_db.*:ALL"
   with_subelements:
     - {{ clients }}
-    - mysql.host
