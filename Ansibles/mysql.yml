@@ -11,7 +11,6 @@
       with_items: "{{ clients }}"
   roles:
     - { role: geerlingguy.mysql }
-  roles:
     - role: ome.mysql_backup 
       mysql_backup_dir: /var/backups/database
       mysql_backup_filename_format: "{{ ansible_hostname }}-%a%m%d.sql.gz"
