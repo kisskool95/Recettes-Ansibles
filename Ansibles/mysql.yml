@@ -10,7 +10,7 @@
               mysql_users: "{{ mysql_users | default([])+ [{'name': item.username, 'password': item.password, 'host': item.host, 'priv': item.priv}] }}"
       with_items: "{{ clients }}"
   roles:
-    - { role: geerlingguy.mysql }
+    - role: geerlingguy.mysql
     - role: ome.mysql_backup 
       mysql_backup_dir: /var/backups/database
       mysql_backup_filename_format: "{{ ansible_hostname }}-%a%m%d.sql.gz"
