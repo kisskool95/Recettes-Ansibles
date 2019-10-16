@@ -2,7 +2,7 @@
 - hosts: database
   become: yes
   vars_files:
-    - vars/mainmysql.yml
+    - tasks/main.yml
   roles:
     - { role: geerlingguy.mysql }
   roles:
