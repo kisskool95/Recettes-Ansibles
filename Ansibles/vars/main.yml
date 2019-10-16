@@ -1,6 +1,6 @@
 ---
 clients: 
-    - username: client1
-      password: client1pwd
-    - username: client2
-      password: client2pwd
+  - username: client1
+    password: client1pwd
+  - username: client2
+    password: client2pwd
