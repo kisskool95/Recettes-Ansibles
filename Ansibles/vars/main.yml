@@ -1,8 +1,8 @@
 ---
 clients: 
   - username: client1
-    password: client1pwd
+    password: itescia
   - username: client2
-    password: client2pwd
+    password: itescia
       
     
