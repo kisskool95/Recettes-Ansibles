@@ -1,6 +1,16 @@
 ---
 clients: 
-  - username: client1
-    password: client1pwd
-  - username: client2
-    password: client2pwd
+  - name: client1
+    mysql:
+        host: "%"
+        password: client1pwd
+        priv: "itescia_db.*:ALL"
+        
+    
+  - name: client2
+    mysql:
+        host: "%"
+        password: client2pwd
+        priv: "itescia_db.*:ALL"
+      
+    
