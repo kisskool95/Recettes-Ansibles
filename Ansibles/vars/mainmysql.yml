@@ -9,5 +9,3 @@ mysql_users:
   host: "{{ item.mysql.hosts }}"
   password: "{{ item.mysql.password }}"
   priv: "{{ item.mysql.privs | join('/') }}"
-  state: "present"
-  loop: "{{ clients }}"

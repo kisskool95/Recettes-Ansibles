@@ -1,3 +1,0 @@
----
-- name: Configure user mysql
-  import_tasks: mainmysql.yml

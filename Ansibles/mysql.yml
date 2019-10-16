@@ -2,7 +2,13 @@
 - hosts: database
   become: yes
   vars_files:
-    - tasks/main.yml
+    - vars/main.yml
+    - vars/mainmysql.yml
+  pre_tasks:
+    - name: Création des users mysql
+      set_fact: 
+        mysql_users:"{{mysql_users | default([]) + [{'name' : item.username, 'password' : item.mysql.password, 'host' : item.mysql.hosts, 'priv' : item.mysql.privs}]}}
+      with_items: {{clients}}
   roles:
     - { role: geerlingguy.mysql }
   roles:
