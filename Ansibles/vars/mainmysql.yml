@@ -10,4 +10,4 @@ mysql_users:
   password: "{{ item.mysql.password }}"
   priv: "{{ item.mysql.privs | join('/') }}"
   state: "present"
-with_items: "{{ clients }}"
+with_subelements: "{{ clients }}"
