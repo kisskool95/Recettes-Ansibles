@@ -5,7 +5,8 @@ mysql_databases:
     encoding: latin1
     collation: latin1_general_ci
 mysql_users:
-  - name: itescia
+  - name: {{item.username}}
     host: "%"
-    password: itescia
+    password: {{item.password}}
     priv: "itescia_db.*:ALL"
+    loop: {{clients}}
