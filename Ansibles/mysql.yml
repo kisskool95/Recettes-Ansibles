@@ -1,7 +1,7 @@
 ---
 - hosts: database
   become: yes
- # become_user: root
+  become_user: root
   vars_files:
     - vars/client.yml
     - vars/mainmysql.yml
@@ -12,5 +12,3 @@
       with_items: "{{ clients }}"
   roles:
     - role: geerlingguy.mysql
-#- import_playbook: mysql_master.yml
-#- import_playbook: mysql_slave.yml
