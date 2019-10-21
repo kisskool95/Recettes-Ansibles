@@ -5,7 +5,7 @@
   vars_files:
     - vars/mainmysql.yml
   roles:
-    - { role: geerlingguy.mysql }
+    - role: geerlingguy.mysql
 - import_playbook: mysql_backup.yml
 - import_playbook: mysql_user.yml
 - import_playbook: mysql_master.yml
