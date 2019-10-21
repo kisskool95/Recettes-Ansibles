@@ -7,12 +7,12 @@ clients:
   - username: client2
     password: itescia
     hosts: "%"
-    privs: "client2_db.*:ALL"
+    priv: "client2_db.*:ALL"
   - username: client3
     password: itescia
     hosts: "%"
-    privs: "client3_db.*:ALL"
+    priv: "client3_db.*:ALL"
   - username: repuser
     password: itescia
     hosts: "%"
-    privs: "*.*:ALL"
+    priv: "*.*:ALL"
