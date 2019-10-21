@@ -1,11 +1,29 @@
 ---
-- name: Create .ssh
-  file:
-          path: /home/itesciaadmin/.ssh
-          state: directory
-          owner: itesciaadmin
-          group: itesciaadmin
-          mode: '0755'
+- name: Add fichier host
+  blockinfile:
+    path: /etc/hosts
+    block: |
+       [all]
+       webserver1
+       webserver2
+       database_master
+       database_slave
+       backup_server
+       
+       [webserver1]
+       IP
+       
+       [webserver2]
+       IP
+       
+       [database_master]
+       IP
+       
+       [database_slave]
+       IP
+       
+       [backup_server]
+       IP
 
 
 
