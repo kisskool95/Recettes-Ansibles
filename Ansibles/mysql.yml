@@ -1,7 +1,7 @@
 ---
 - hosts: database
- # become: yes
-  become_user: root
+  become: yes
+ # become_user: root
   vars_files:
     - vars/mainmysql.yml
   pre_tasks:
