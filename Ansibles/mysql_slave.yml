@@ -1,5 +1,5 @@
 ---
-- hosts: database
+- hosts: database_slave
   become: yes
   tasks:
     - name: Creation de la réplication du master
