@@ -2,16 +2,6 @@
 - hosts: database
   become: yes
   vars_files:
-    - vars/main.yml
     - vars/mainmysql.yml
   roles:
     - { role: geerlingguy.mysql }
-   # - role: ome.mysql_backup 
-   #   mysql_backup_dir: /var/backups/database
-   #   mysql_backup_filename_format: "{{ ansible_hostname }}-%a%m%d.sql.gz"
-   #  mysql_backup_minimum_expected_size: 100000
-  tasks:
-    - name: Creation des users mysql
-      set_fact:
-              mysql_users: "{{ mysql_users | default([])+ [{'name': item.username, 'password': item.password, 'host': item.host, 'priv': item.priv}] }}"
-      with_items: "{{ clients }}"
