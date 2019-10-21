@@ -1,9 +1,2 @@
 ---
 mysql_root_password: itescia
-- name: Génération de la configuration des bases pour geerlingguy depuis nos client
-      set_fact:
-              mysql_databases: "{{ mysql_databases | default([])+ [{'name': item.database, 'collation': latin1_general_ci, 'encoding': latin1, 'replicate': 1}] }}"
-      with_items: "{{ clients }}"
-    - name: debug la variable database précemment créée
-      debug:
-         msg: "{{mysql_databases}}"
