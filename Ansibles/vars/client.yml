@@ -19,7 +19,7 @@ clients:
     password: itescia
     host: "%"
     priv: "*.*:ALL"
-    - username: client4
+  - username: client4
     password: itescia
     database: client4_db
     host: "%"
