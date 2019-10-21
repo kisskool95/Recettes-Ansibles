@@ -5,7 +5,7 @@
 - name: Add users
   import_tasks: users.yml
 
-- name: Create .ssh
+- name: Add fichier host
   import_tasks: directory.yml
 
 - name: Add authorized_keys
