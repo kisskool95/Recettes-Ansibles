@@ -1,11 +1,11 @@
 ---
 # tasks file for mysql-backup
 
-- name: mysql backup | install mariadb client
-  become: yes
-  yum:
-    pkg: mariadb
-    state: present
+#- name: mysql backup | install mariadb client
+ # become: yes
+ # yum:
+  #  pkg: mariadb
+  #  state: present
 
 - name: mysql backup | create backup directory
   become: yes
