@@ -6,10 +6,17 @@ packages:
         - vim
         - dnsutils
         - sudo
+
 utilisateur:
-
-        -  name: "dimitri"
-           password: '*'
-
-        - name: "johan"
+        - name: "KevinDS"
           password: '*'
+
+        - name: "Johan"
+          password: '*'
+
+        - name: "Xavier"
+          password: '*'
+
+        - name: "Mathieu"
+          password: '*'
+
