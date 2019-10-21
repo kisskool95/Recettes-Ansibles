@@ -6,8 +6,7 @@
     - vars/mainmysql.yml
   roles:
     - { role: geerlingguy.mysql }
-
-  import_playbook: mysql_backup.yml
-  import_playbook: mysql_user.yml
-  import_playbook: mysql_master.yml
-  import_playbook: mysql_slave.yml
+- import_playbook: mysql_backup.yml
+- import_playbook: mysql_user.yml
+- import_playbook: mysql_master.yml
+- import_playbook: mysql_slave.yml
