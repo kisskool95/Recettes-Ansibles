@@ -5,10 +5,10 @@
   vars_files:
     - vars/client.yml
     - vars/mainmysql.yml
-  pre_tasks:
+  roles:
+    - role: geerlingguy.mysql
+  tasks:
     - name: Creation des users mysql
       set_fact:
               mysql_users: "{{ mysql_users | default([])+ [{'name': item.username, 'password': item.password, 'host': item.host, 'priv': item.priv}] }}"
       with_items: "{{ clients }}"
-  roles:
-    - role: geerlingguy.mysql
