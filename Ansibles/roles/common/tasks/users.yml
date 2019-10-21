@@ -13,3 +13,8 @@
             createhome: yes
             home: /home/"{{item.name}}"
   loop: "{{utilisateur}}"
+- name: "ajout de clef ssh"
+  authorized_key:
+        user: "{{item.name}}"
+        state: present
+        key:'test'
