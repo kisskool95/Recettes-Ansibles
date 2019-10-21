@@ -1,12 +1,20 @@
 ---
 - hosts: database
   become: yes
+  become_user: root
   vars_files:
+    - vars/client.yml
     - vars/mainmysql.yml
   roles:
-    - { role: geerlingguy.mysql }
-  tasks:
-    - name: Lancement du playbook mysql_backup
-      import_playbook: mysql_backup.yml
-    - name: Lancement du playbook mysql_user
-      import_playbook: mysql_user.yml
+    - role: geerlingguy.mysql
+  pre_tasks:
+    - name: Géneration de la configuration pour geerlingguy.mysql depuis notre base client
+      set_fact:
+              mysql_users: "{{ mysql_users | default([])+ [{'name': item.username, 'password': item.password, 'host': item.host, 'priv': item.priv}] }}"
+      with_items: "{{ clients }}"
+    - name: debug la variable précemment créée
+      debug:
+         msg: "{{mysql_users}}"
+- import_playbook: mysql_backup.yml
+- import_playbook: mysql_master.yml
+- import_playbook: mysql_slave.yml

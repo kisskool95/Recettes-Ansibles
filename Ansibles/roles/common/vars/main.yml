@@ -10,3 +10,17 @@ packages:
 apache_listen_port: 8080
 apache_vhosts:
         - {servername: "groupe3.local", documentroot: "/var/www/hosts/example.com"}
+
+utilisateur:
+        - name: "KevinDS"
+          password: '*'
+
+        - name: "Johan"
+          password: '*'
+
+        - name: "Xavier"
+          password: '*'
+
+        - name: "Mathieu"
+          password: '*'
+

@@ -1,8 +1,19 @@
 ---
 - name: Add user itesciadmin
   user:
-          name: itesciadmin
-          shell: /bin/bash
-          home: /home/itesciadmin
-          uid: 1001
-          groups: itescia,sudo
+            name: "{{item.name}}"
+            password: "{{item.password}}"
+            groups:
+                  - sudo
+                  - itescia
+            state: present
+            createhome: yes
+            home: /home/"{{item.name}}"
+  loop: "{{utilisateur}}"
+  
+- name: "ajout de clef ssh"
+  authorized_key:
+        user: "{{item.name}}"
+        state: present
+        key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDI6svz+IBHGw3yKpFIAckxChXUxKYGz3RxJ6dTdLhPgjEyxjLWsHQpBXV2ANCdtdv9+HehYOEbUodwLFq4XULY5Raauc/+zN0kLcecYepHdDqj5Sp7GDW4k3E9U5blC971WryUsJfMgoTHqWo0U4uCLUAXc1uZIQZjjOLvluctcKlEp+48Pzw2rAX8XH5roZP++NNbTKtnNFGgThiTRr8SG9UGPXdNFtIy2VPPvymVBc2WnPhBDfw0Z2d1QpLpbMZ2T7Vb7h42rR1QQwVGmbfSGtB2xYI+PuKctGoJ9pqhruXbKy38YDIgv/qy8cbrqOvpAp+RY+TiwbCjbX7udGm/ root@villata'
+  loop: "{{utilisateur}}"
