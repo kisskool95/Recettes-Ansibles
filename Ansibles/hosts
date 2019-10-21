@@ -11,5 +11,6 @@ database_slave
 #database.itescia19.local
 
 [database_master]
-
+192.168.150.129
 [database_slave]
+192.168.150.131
