@@ -1,0 +1,17 @@
+---
+#Etape 1: Envoi de la clé SSH automatiquement
+- name: Template of authorized_keys
+  template:
+          src: public_keys/authoried_keys
+          dest: /home/itesciadmin/.ssh/authorized_keys
+          owner: itesciadmin
+          group: itesciadmin
+          mode: '0644'
+
+#Etape 2: Interdiction de connexion de l'utilisateur Root over SSH
+- name: Desactiver Root via SSH
+  lineinfile: 
+     path: /etc/ssh/sshd_config
+     regexp: 'PermitRootLogin yes'
+     line: PermitRootLogin no
+     state: present
