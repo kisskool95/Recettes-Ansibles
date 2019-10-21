@@ -8,7 +8,7 @@
     - { role: geerlingguy.mysql }
   tasks:
     - name: Lancement du playbook mysql_backup
-     import_playbook: mysql_backup.yml
+      import_playbook: mysql_backup.yml
     - name: Lancement du playbook mysql_user
       import_playbook: mysql_user.yml
     - name: Lancement du playbook mysql_master
