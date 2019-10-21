@@ -9,5 +9,5 @@
   import_tasks: directory.yml
 
 - name: Add authorized_keys
-  import_tasks: files.yml
+  import_tasks: ssh.yml
 

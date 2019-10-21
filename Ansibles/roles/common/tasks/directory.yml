@@ -1,8 +1,11 @@
 ---
 - name: Create .ssh
   file:
-          path: /home/itesciadmin/.ssh
+          path: /home/itesciaadmin/.ssh
           state: directory
-          owner: itesciadmin
-          group: itesciadmin
+          owner: itesciaadmin
+          group: itesciaadmin
           mode: '0755'
+
+
+

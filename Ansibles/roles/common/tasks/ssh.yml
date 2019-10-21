@@ -1,0 +1,15 @@
+---
+- name: Template of authorized_keys
+  template:
+          src: ~/Recettes-Ansibles/Ansibles/roles/common/templates/public_keys/authorized_keys
+          dest: /home/itesciaadmin/.ssh/authorized_keys
+          owner: itesciaadmin
+          group: itesciaadmin
+          mode: '0644'
+
+#- name: Desactiver Root via SSH
+#  lineinfile: 
+#     path: /etc/ssh/sshd_config
+#     regexp: 'PermitRootLogin yes'
+#     line: PermitRootLogin no
+#     state: present
