@@ -1,12 +1,7 @@
 ---
 mysql_root_password: itescia
 mysql_databases:
-  - name: client1_db
+  - name: "item.mysql_users"_db
     encoding: latin1
     collation: latin1_general_ci
-  - name: client2_db
-    encoding: latin1
-    collation: latin1_general_ci
-  - name: client3_db
-    encoding: latin1
-    collation: latin1_general_ci
+    with_items: "{{ clients }}"

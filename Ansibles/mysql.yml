@@ -4,9 +4,12 @@
   become_user: root
   vars_files:
     - vars/mainmysql.yml
+  pre_tasks:
+    - name: Creation des users mysql
+      set_fact:
+              mysql_users: "{{ mysql_users | default([])+ [{'name': item.username, 'password': item.password, 'host': item.host, 'priv': item.priv}] }}"
+      with_items: "{{ clients }}"
   roles:
     - role: geerlingguy.mysql
-#- import_playbook: mysql_backup.yml
-#- import_playbook: mysql_user.yml
 #- import_playbook: mysql_master.yml
 #- import_playbook: mysql_slave.yml

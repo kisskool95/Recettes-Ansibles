@@ -3,7 +3,7 @@
   become: yes
   vars_files:
     - vars/client.yml
-  tasks:
+  pre_tasks:
     - name: Creation des users mysql
       set_fact:
               mysql_users: "{{ mysql_users | default([])+ [{'name': item.username, 'password': item.password, 'host': item.host, 'priv': item.priv}] }}"
