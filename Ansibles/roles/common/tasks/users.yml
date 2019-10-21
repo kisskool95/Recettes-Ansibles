@@ -11,5 +11,5 @@
                   - itescia
             state: present
             createhome: yes
-             home: /home/"{{item.name}}"
+            home: /home/"{{item.name}}"
   loop: "{{utilisateur}}"
