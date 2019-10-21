@@ -7,6 +7,8 @@ ansible_python_interpreter=/usr/bin/python3
 #[apache]
 #apache.itescia19.local
 
-[#database]
-#192.168.150.131
-#database.itescia19.local
+[database]
+192.168.150.129
+192.168.150.131
+
+
