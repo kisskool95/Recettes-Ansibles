@@ -6,13 +6,13 @@ clients:
     priv: "client1_db.*:ALL"
   - username: client2
     password: itescia
-    hosts: "%"
+    host: "%"
     priv: "client2_db.*:ALL"
   - username: client3
     password: itescia
-    hosts: "%"
+    host: "%"
     priv: "client3_db.*:ALL"
   - username: repuser
     password: itescia
-    hosts: "%"
+    host: "%"
     priv: "*.*:ALL"

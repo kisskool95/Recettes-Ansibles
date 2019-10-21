@@ -10,8 +10,8 @@
   pre_tasks:
     - name: Géneration de la configuration pour geerlingguy.mysql depuis notre base client
       set_fact:
-              mysql_users: "{{ mysql_user | default([])+ [{'name': item.username, 'password': item.password, 'host': item.host, 'priv': item.priv}] }}"
+              mysql_users: "{{ mysql_users | default([])+ [{'name': item.username, 'password': item.password, 'host': item.host, 'priv': item.priv}] }}"
       with_items: "{{ clients }}"
     - name: debug la variable précemment créée
       debug:
-         msg: {{mysql_users}}
+         msg: "{{mysql_users}}"
