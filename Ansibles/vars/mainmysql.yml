@@ -1,6 +1,2 @@
 ---
 mysql_root_password: itescia
-mysql_databases:
-  - name: itescia_db
-    encoding: latin1
-    collation: latin1_general_ci

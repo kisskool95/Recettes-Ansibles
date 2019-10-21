@@ -1,6 +1,8 @@
-#[all]
-#192.168.233.128
-
+[all]
+192.168.114.134
+[all:vars]
+ansible_user=root
+ansible_python_interpreter=/usr/bin/python3
 
 #[apache]
 #apache.itescia19.local
@@ -8,3 +10,5 @@
 [database]
 192.168.23.179
 #database.itescia19.local
+192.168.150.129
+192.168.150.131
