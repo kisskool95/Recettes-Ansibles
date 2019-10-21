@@ -3,27 +3,9 @@
   blockinfile:
     path: /etc/hosts
     block: |
-       [all]
-       webserver1
-       webserver2
-       database_master
-       database_slave
-       backup_server
-       
-       [webserver1]
-       IP
-       
-       [webserver2]
-       IP
-       
-       [database_master]
-       IP
-       
-       [database_slave]
-       IP
-       
-       [backup_server]
-       IP
-
+          192.168.23.185 database_master
+          192.168.23.184 database_slave
+          192.168.23.181 webserver1
+          192.168.23.186 client1
 
 
