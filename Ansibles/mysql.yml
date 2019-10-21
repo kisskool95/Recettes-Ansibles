@@ -6,10 +6,10 @@
     - vars/mainmysql.yml
   roles:
     - role: geerlingguy.mysql
-    - role: ome.mysql_backup 
-      mysql_backup_dir: /var/backups/database
-      mysql_backup_filename_format: "{{ ansible_hostname }}-%a%m%d.sql.gz"
-      mysql_backup_minimum_expected_size: 100000
+   # - role: ome.mysql_backup 
+   #   mysql_backup_dir: /var/backups/database
+   #   mysql_backup_filename_format: "{{ ansible_hostname }}-%a%m%d.sql.gz"
+   #  mysql_backup_minimum_expected_size: 100000
   tasks:
     - name: Creation des users mysql
       set_fact:
