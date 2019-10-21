@@ -1,0 +1,18 @@
+---
+clients: 
+  - username: client1
+    password: itescia
+    host: "%"
+    priv: "client1_db.*:ALL"
+  - username: client2
+    password: itescia
+    hosts: "%"
+    privs: "client2_db.*:ALL"
+  - username: client3
+    password: itescia
+    hosts: "%"
+    privs: "client3_db.*:ALL"
+  - username: repuser
+    password: itescia
+    hosts: "%"
+    privs: "*.*:ALL"

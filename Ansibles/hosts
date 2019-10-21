@@ -6,5 +6,10 @@
 #apache.itescia19.local
 
 [database]
-172.16.203.74
+database_master
+database_slave
 #database.itescia19.local
+
+[database_master]
+
+[database_slave]

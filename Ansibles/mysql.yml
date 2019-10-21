@@ -10,3 +10,7 @@
       import_playbook: mysql_backup.yml
     - name: Lancement du playbook mysql_user
       import_playbook: mysql_user.yml
+    - name: Lancement du playbook mysql_master
+      import_playbook: mysql_master.yml
+    - name: Lancement du playbook mysql_slave
+      import_playbook: mysql_slave.yml
